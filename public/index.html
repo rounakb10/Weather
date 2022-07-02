@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="weather-card">
+			<div class="input">
+				<input
+					type="text"
+					class="input-value"
+					placeholder="Enter city name"
+				/>
+				<div class="buttons">
+					<input type="submit" value=" " class="submit" />
+					<input type="button" value=" " class="locate-btn" />
+				</div>
+			</div>
+
+			<div class="display">
+				<p class="city-name"></p>
+				<br />
+				<div class="left-row">
+					<p class="temp"></p>
+					<p class="feels-like"></p>
+					<p class="pressure"></p>
+					<p class="humidity"></p>
+				</div>
+				<div class="right-row">
+					<p class="short-desc"></p>
+					<p class="desc"></p>
+					<p class="visibility"></p>
+					<p class="wind"></p>
+				</div>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+		<script type="module">
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js"
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+				apiKey: "AIzaSyAx5ayg25Da-Q5BmhAHy5ttW2ZQTPY9Vg8",
+				authDomain: "weather-d84d8.firebaseapp.com",
+				projectId: "weather-d84d8",
+				storageBucket: "weather-d84d8.appspot.com",
+				messagingSenderId: "7870187724",
+				appId: "1:7870187724:web:ba064346b281b33be1da69",
+			}
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig)
+		</script>
+	</body>
+</html>
